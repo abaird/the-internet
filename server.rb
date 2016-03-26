@@ -466,3 +466,19 @@ end
 get '/exit_intent' do
   erb :exit_intent
 end
+
+get '/javascript_form' do
+  erb :javascript_form
+end
+
+get '/link_page_one' do
+  erb :link_page_one
+end
+
+get '/link_page_two' do
+  erb :link_page_two
+end
+
+get '/link_page_three' do
+  erb :link_page_three
+end
