@@ -1,0 +1,34 @@
+<form id="bmiform">
+    <h3> BMI Calculator</h3>
+
+    <input type="text" name="weight" id="weight" placeholder="weight" />
+    <p> in pounds</p>
+    <br>
+
+    <input type="text" name="height" id="height" placeholder="height" />
+    <p> in inches</p>
+    <br>
+    <br>
+
+    <input id="calc" type="button" value="Calculate BMI" onclick="calcBMI();"/>
+
+    <h3>Your BMI is:</h3>
+    <input type="text" name="bmi" id="bmi" placeholder="bmi" />
+    <br>
+    <br>
+
+    <input id="clear" type="button" value="clear" onclick="clearthis(this);" />
+</form>
+
+<script>
+    function calcBMI() {
+        var height = document.getElementById("height").value;
+        var weight = document.getElementById("weight").value;
+        var bmi = parseInt((weight * 703) / (height * height));
+        document.getElementById("bmi").value = bmi;
+    };
+
+    function clearthis(element){
+        document.getElementById("bmiform").reset();
+    };
+</script>
